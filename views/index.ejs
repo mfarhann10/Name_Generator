@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Partial & Layout</title>
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-800 min-h-screen flex items-center justify-center">
+    <div class="text-center">
+        <% if(locals.noun) {%>
+            <h1 class="text-5xl font-bold text-white"><%=noun %></h1>
+            <% } else {%>
+                <h1 class="text-5xl font-bold text-pink-300">Welcome to Band Generator</h1>
+            <% } %>
+        <form action="/submit" method="POST">
+            <input type="submit" value="Generate Name" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-5 rounded focus:outline-none focus:shadow-outline cursor-pointer">
+        </form>
+    </div>
+</body>
+</html>
